@@ -1,0 +1,39 @@
+body {
+    display: grid;
+    height: 100vh;
+    margin: 0;
+    align-items: center;
+}
+
+#text {
+    text-align: center;
+    font-weight: 500;
+    font-size: 1.75em;
+}
+
+#quote-box {
+    background-color: white;
+    border-radius: 5px;
+    padding: 40px;
+}
+
+blockquote::before {
+    content: '"';
+}
+
+#author {
+    text-align: right;
+}
+
+#new-quote {
+    float: right;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    height: 40px;
+}
+
+.fab {
+    font-size: 40px;
+}
