@@ -60,7 +60,7 @@ class QuoteBox extends React.Component {
       return (
         <div className="container-fluid">
           <div className="text-center">
-            <h1>Random Quote Machine</h1>
+            <h1>Words To Live By...</h1>
           </div>
           <div className="row justify-content-center">
             <div id="quote-box" className="col-5">
