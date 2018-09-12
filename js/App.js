@@ -59,6 +59,9 @@ class QuoteBox extends React.Component {
     } else {
       return (
         <div className="container-fluid">
+          <div className="text-center">
+            <h1>Random Quote Machine</h1>
+          </div>
           <div className="row justify-content-center">
             <div id="quote-box" className="col-5">
               <div>

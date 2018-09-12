@@ -3,6 +3,7 @@ body {
     height: 100vh;
     margin: 0;
     align-items: center;
+    font-family: Bookman
 }
 
 #text {
@@ -15,14 +16,17 @@ body {
     background-color: white;
     border-radius: 5px;
     padding: 40px;
+    font-family: 'Homemade Apple', cursive;
+    box-shadow: 10px 10px 5px;
 }
 
 blockquote::before {
-    content: '"';
+    content: '" ';
 }
 
 #author {
     text-align: right;
+    font-family: Bookman;
 }
 
 #new-quote {
@@ -32,8 +36,16 @@ blockquote::before {
     padding: 5px 10px;
     border-radius: 3px;
     height: 40px;
+    font-family: Bookman
 }
 
 .fab {
     font-size: 40px;
+}
+ button {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+button:hover {
+    box-shadow: none;
 }
