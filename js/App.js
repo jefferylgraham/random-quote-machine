@@ -10,13 +10,31 @@ class QuoteBox extends React.Component {
     this.state = {
       isLoaded: false,
       quotes: [],
-      color: "rgb(" + x + "," + y + "," + y + ")"
+      color: "rgba(" + x + "," + y + "," + z + ")",
+      backgroundGradient:
+        "linear-gradient(127deg, rgba(" +
+        x +
+        "," +
+        y +
+        "," +
+        z +
+        "," +
+        ".8" +
+        "), rgba(" +
+        x +
+        "," +
+        y +
+        "," +
+        z +
+        "," +
+        "0" +
+        ") 70.71%)"
     };
     this.changeQuote = this.changeQuote.bind(this);
   }
 
   componentDidMount() {
-    document.body.style.background = this.state.color;
+    document.body.style.background = this.state.backgroundGradient;
     fetch(
       "https://gist.githubusercontent.com/camperbot/5a022b72e96c4c9585c32bf6a75f62d9/raw/e3c6895ce42069f0ee7e991229064f167fe8ccdc/quotes.json"
     )
@@ -42,7 +60,25 @@ class QuoteBox extends React.Component {
     var newGreen = Math.floor(Math.random() * 256);
     var newBlue = Math.floor(Math.random() * 256);
     this.setState({
-      color: "rgb(" + newRed + "," + newGreen + "," + newBlue + ")"
+      color: "rgb(" + newRed + "," + newGreen + "," + newBlue + ")",
+      backgroundGradient:
+        "linear-gradient(127deg, rgba(" +
+        newRed +
+        "," +
+        newGreen +
+        "," +
+        newBlue +
+        "," +
+        ".8" +
+        "), rgba(" +
+        newRed +
+        "," +
+        newGreen +
+        "," +
+        newBlue +
+        "," +
+        "0" +
+        ") 70.71%)"
     });
   }
 
@@ -50,7 +86,7 @@ class QuoteBox extends React.Component {
     const { error, isLoaded, quotes } = this.state;
     let index = Math.floor(Math.random() * quotes.length);
 
-    document.body.style.background = this.state.color;
+    document.body.style.background = this.state.backgroundGradient;
 
     if (error) {
       return <div>Error: {error.message}</div>;
@@ -59,9 +95,6 @@ class QuoteBox extends React.Component {
     } else {
       return (
         <div className="container-fluid">
-          <div className="text-center">
-            <h1>Words To Live By...</h1>
-          </div>
           <div className="row justify-content-center">
             <div id="quote-box" className="col-5">
               <div>
